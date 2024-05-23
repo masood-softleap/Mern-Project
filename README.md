@@ -8,7 +8,7 @@ The frontend of the app is built with React, with a major focus on learning MERN
 #Used Thunder Client for API testing
 #Json web token for authentication
 #Bootstrap for design
-#Express Validator for inpput fields
+#Express Validator for inpput fields.
 
 
 
