@@ -35,8 +35,8 @@ const getAllNotes = async () => {
       method: "POST", // *GET, POST, PUT, DELETE, etc.
       headers: {
         "Content-Type": "application/json",
-        "auth-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjVkMmJkZWY2ZDFmNWRkZDIwMjUxNDBjIn0sImlhdCI6MTcwODMxMDAxOH0.w7AWjU6mjwLcehAInDwLOzmNduXjArqZ93l8ZAAR180"
-      }, body: JSON.stringify({title,description,tag}),
+        "auth-token": localStorage.getItem('token')     
+       }, body: JSON.stringify({title,description,tag}),
     });
     const json=await response.json();
     const note = {
@@ -53,8 +53,7 @@ const getAllNotes = async () => {
       method: "PUT", // *GET, POST, PUT, DELETE, etc.
       headers: {
         "Content-Type": "application/json",
-        "auth-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjVkMmJkZWY2ZDFmNWRkZDIwMjUxNDBjIn0sImlhdCI6MTcwODMxMDAxOH0.w7AWjU6mjwLcehAInDwLOzmNduXjArqZ93l8ZAAR180"
-      }, body: JSON.stringify({title,description,tag}),
+        "auth-token": localStorage.getItem('token')      }, body: JSON.stringify({title,description,tag}),
     });
   let newNotes=JSON.parse(JSON.stringify(notes))
   for (let index = 0; index < newNotes.length; index++) {
@@ -74,8 +73,7 @@ const deleteNote =async (id) => {
     method: "DELETE", // *GET, POST, PUT, DELETE, etc.
     headers: {
       "Content-Type": "application/json",
-      "auth-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjVkMmJkZWY2ZDFmNWRkZDIwMjUxNDBjIn0sImlhdCI6MTcwODMxMDAxOH0.w7AWjU6mjwLcehAInDwLOzmNduXjArqZ93l8ZAAR180"
-    }
+      "auth-token": localStorage.getItem('token')  }
   });
   const json=response.json();
 

@@ -42,7 +42,7 @@ setNote({...note,[e.target.name]:e.target.value})
   <Addnote></Addnote>
 
 
-  <button type="button"  ref={ref} class=" d-none btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  <button type="button"  ref={ref} className=" d-none btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Launch demo modal
 </button>
 <div className="modal fade" id="exampleModal"  tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
